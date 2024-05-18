@@ -1,4 +1,6 @@
 import { Cards } from "../types/Cards";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css';
 
 
 type Props = {
@@ -14,18 +16,27 @@ export const Projects = ({datas}:Props) => {
             <h2>Projects</h2>
         </div>
 
-            <div id="container_projects">
-                {datas.map(item => 
-                <div key={item.id} className="Card">
-                    <img src={item.url} alt={item.title} />  
-                    <h3>{item.title}</h3>
-                    <div className="test">
-                        <h5>Tecnologias utilizadas</h5>
-                            <p >{item.tecnologys}</p>
-                    </div>
-                    
-            </div>
+            <div className="container_projects" >
+                <Swiper
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                navigation
+                >
+                    {datas.map(item => 
+                    <SwiperSlide  id="container_projects" >
+                        <div  className="Card">
+                            <img src={item.url} alt={item.title} />  
+                            <h3>{item.title}</h3>
+                            <div className="list_tec">
+                                <h5>Tecnologias utilizadas</h5>
+                                    <p >{item.tecnologys}</p>
+                            </div>
+                        
+                        </div>
+                    </SwiperSlide>
                 )}
+                </Swiper>
+                
             </div>
         </section>
     )

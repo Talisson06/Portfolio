@@ -52,6 +52,7 @@
 }
 
 .title{
+    margin-bottom: 15px;
     font-size: 1.4rem;
 }
 
@@ -129,24 +130,23 @@
     align-items: center;
 }
 #container_projects{
-    margin: 10px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Card{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    justify-content: space-between;
     align-items: center;
     width: 260px;
-    height: 330px;
+    height: 350px;
     background-color: var(--bg-white);
-    margin: 10px;
-    padding: 10px;
+    margin: 25px;
+    padding: 7px;
     border-radius: 10px;
 }
-    
 
 .Card img{
     width: 100%;
@@ -154,30 +154,11 @@
     border-radius: inherit;
     
 }
-.tecnologys-used {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 1.5rem;
-    margin: 10px;
-    padding: 8px;
-    
-    background-color: #222222;
-}
-.test {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    
-}
 
 .Card:hover{
     scale: 1.1;
     transition: 0.8s ease-in;
-    
-    box-shadow:  10px 10px 100px #e7e1e1 ;
-    
+    box-shadow:  10px 10px 25px #e7e1e1 ;
 }
 
 .Card h3{
@@ -201,6 +182,24 @@
 .Card p{
     animation: elastic 3s linear infinite;
 }
+
+.tecnologys-used {
+    gap: 1.5rem;
+    margin: 10px;
+    padding: 8px;
+    background-color: #222222;
+}
+.list_tec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+
+
 
 @keyframes elastic {
     0% {
