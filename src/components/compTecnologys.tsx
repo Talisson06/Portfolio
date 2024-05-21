@@ -16,7 +16,9 @@ export const Tecnologys = ( {tecnologys}:Props ) => {
             <div id="list_Tecnologys">
                 <ul>
                     {tecnologys.map(item =>
-                        <li id={`${item.tecnology}`} >{item.tecnology}</li>
+                        <li>
+                            <img src={item.img} alt={item.tecnology} /> 
+                        </li>
                         )}
                 </ul>
             </div>

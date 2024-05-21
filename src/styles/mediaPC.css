@@ -1,0 +1,58 @@
+@media screen and ( min-width:1280px) and ( max-width:1920px ) {
+    body{
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        
+    } 
+    #header{
+        display: none;
+        color: aliceblue;
+    }
+    #Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    #Profile_About{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 50vh;
+        margin-top: 100px;
+        gap: 5rem;
+        border-radius: 10px;
+        
+    }
+    #profile{
+        max-width: 350px;
+        max-height: 425px;
+        
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    
+   
+    #aboutme p{
+        width: 600px;
+        
+    }
+    
+    #tecnologys {
+        max-width: 1440px;
+        border-radius: 10px;
+    }
+    
+    #projects{
+        max-width: 1440px;
+        border-radius: 10px;
+    }
+}
+

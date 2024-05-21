@@ -1,4 +1,5 @@
 export type TecnologysUsed = {
     id:number,
-    tecnology: string
+    tecnology: string;
+    img:string
 }

@@ -2,5 +2,7 @@ export type Cards = {
     id: number;
     url: string;
     title: string;
-    tecnologys: string[];
+    tecnologys?: string[];
+    link?:string;
+    img:string[];
 }

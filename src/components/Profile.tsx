@@ -1,17 +1,20 @@
+import { Apresentation } from "./apresentation"
+
 export const Profile = () => {
     return (
-        <section>
+        <section id="Profile_About">
 
-            <div id="picture">
-                <img src="src/assets/avatar.png" alt="" />
+            
+            <div id="profile">
+                
+                <div id="picture">
+                    <img src="src/assets/Perfil.jpeg" alt="Foto de Perfil" />
+                </div>
             </div>
-
-            <div className="redes_Btn">
-                <button><a href=""><img src="../src/assets/linkedin.png" alt="" /></a></button>
-                <button><a href=""><img src="../src/assets/github.png" alt="" /></a></button>
-                <button><a href=""><img src="../src/assets/instagram.png" alt="" /></a></button>
-            </div>
-
+            
+            <Apresentation/>
+            
+            
         </section>
         
     )

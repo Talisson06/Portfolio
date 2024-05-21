@@ -1,3 +1,4 @@
+
 import { About } from "../types/About"
 
 type Props = {
@@ -8,10 +9,10 @@ export const Aboutme = ({ about }:Props) => {
     return(
 
 
-        <main>
+        <main id="about">
 
             {about.map(item =>
-                <div id="about">
+                <div id="aboutme">
                     <div className="title">
                         <h2>{item.title}</h2>
                     </div>

@@ -1,34 +1,129 @@
+@import './styles/mediaPC.css';
+@import './styles/mediaMobile.css';
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: var(--textColor-white);
     font-family: monospace;
-    max-width: 100vw;
-    max-height: 100vh;
-
+    color-scheme: light dark;
+    
 }
 
 :root{
-    --bg-white: #f8f8ff;
-    --bg-black: #222222;
-    --textColor-white: #e4e4e4;
-    --textColor-black: #1b1b1b;
+    --bg-white: #f7f7f7;
+    --bg-black: #111010;
+    --bg-header:#0a1b1d; 
+    --textColor-white: #dfd4d4;
+    --textColor-black: #1f1e1e;
     --title-size: 20px;
-    background-color: var(--bg-black);
+    width: 100vw;
+    height: 100vh;
+    color-scheme: light dark;
 }
+
+@media (prefers-color-scheme: ligth) {
+    .body{
+        color: var(--textColor-black);
+        background-color: var(--bg-white);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .body{
+        color: var(--textColor-white);
+        background-color: (var(--bg-black));
+    }
+}
+
+body{
+    overflow-x:hidden;
+    width: 100vw;
+    
+    background-color: light-dark(var(--bg-white), var(--bg-black));
+    color: light-dark(var(--textColor-black), var(--textColor-white));
+}
+
+
+#header{
+    width: 100vw;
+    height: 80px;
+    background-color: var(--bg-header);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+}
+#header_container{
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #dfd4d4;
+}
+#header_name:hover{
+    color: #e66465;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    gap: 1.8rem;
+}
+nav a {
+    color: #dfd4d4;
+    text-decoration: none;
+}
+nav a:hover{
+    scale: 1.2;
+    transition: 1.2s;
+    color: #e66465;
+
+}
+
+header .nav-btn{
+    
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f7f7f7;
+    visibility: hidden;
+}
+
+@media (min-width:320px) and (max-width:798px){
+    header .nav-btn {
+        visibility: visible;
+        
+    }
+}
+
+
+
+
 
 #picture{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 10px;
+    padding: 10px;
+    
 }
 #picture img{
-    max-width: 150px;
-    max-height: 150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 1000px;
     margin: 10px;
+    border: #aa9b9b solid;
+    box-shadow:  10px 10px 25px #e7e1e1 ;
+   
 }
 
 .redes_Btn{
@@ -38,43 +133,36 @@
     text-align: center;
     gap: 1.2rem;
     margin: 15px;
+    
 }
 .redes_Btn img{
     width: 30px;
     height: 30px;
-    animation: elastic 1.2s infinite;
-    
 }
-
-
-.redes_Btn button{
-    color: #222222;
+.redes_Btn a:hover{
+    scale: 1.2;
+    transition: 1s;
 }
 
 .title{
     margin-bottom: 15px;
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
 
-#about{
+#aboutme{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 25vh;
     margin: 100px 0;
-    background-color: var(--bg-white);
     border-radius: 50px;
+    
 }
-#about h2 {
-    color: #222222;
-}
-#about p{
+
+#aboutme p{
     margin: 0 10px;
     padding: 15px;
     font-size: 1.3rem;
-    color: #222222;
     font-family: 'monospace' ;
 }
 
@@ -83,36 +171,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 100px;
     font-size: 1.2rem;
+    gap: 2rem;
 }
 
 
 
 #list_Tecnologys ul{
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 10px;
-    text-align: center;
-    margin: 30px  0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;    
     
 }
 #list_Tecnologys li{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 105px;
-    height: 30px;
-    border-radius: 1000px;
-    color: #fff;
-    
+    padding: 10px
+
 }
-#list_Tecnologys li:hover{    
-    scale: 1.05;
-    cursor: pointer;
-    transition: 1.1s;
-}   
+#list_Tecnologys img{
+    width: 50px;
+    height: 50px;
+    gap: 1;
+}
+
 
 #HTML {  background-color: rgb(235, 73, 24); }
 #CSS { background-color: rgb(38, 73, 226); }
@@ -133,6 +218,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
+}
+#container_projects a {
+    text-decoration: none;
+}
+.swiper{
+    max-width: 1440px;
 }
 
 .Card{
@@ -140,12 +233,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--bg-white);
     width: 260px;
     height: 350px;
-    background-color: var(--bg-white);
     margin: 25px;
     padding: 7px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .Card img{
@@ -206,14 +300,15 @@
         transform: scale(1,1);
     }
     25%{
-        transform: scale(1.2);
+        transform: scale(1.16);
     }
     50%{
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     100% {
         transform: scale(1,1);
     }
     
 }
+
 
